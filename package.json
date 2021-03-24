@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "A to-do list made with EJS, MongoDB, and Mongoose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisparrella23/ToDoList.git"
+  },
+  "author": "Chris Parrella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisparrella23/ToDoList/issues"
+  },
+  "homepage": "https://github.com/chrisparrella23/ToDoList#readme"
+}
