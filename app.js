@@ -38,6 +38,10 @@ const item3 = new Item({
   name: "<-- Hit this to delete an item."
 });
 
+const item4 = new Item({
+  name: "Enter '/' followed by a new list name in the URL to make a new list."
+});
+
 const defaultItems = [item1, item2, item3];
 
 const listSchema = {
