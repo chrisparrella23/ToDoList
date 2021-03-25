@@ -1,0 +1,136 @@
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(-250deg, #4682B4 35%, #E4E9FD 65%);
+  min-height: 1000px;
+  font-family: 'Poppins';
+}
+
+h1 {
+  color: #FFF;
+  padding: 10px;
+}
+
+/* Sidebar stuff */
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* background: #719FB0; */
+  background-image: linear-gradient(#E4E9FD, #4682B4);
+  overflow-x: hidden;
+  padding: 16px 0;
+    border-right-style: double;
+  border-right-color: #00204A;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #00204A;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FFF;
+}
+
+.listButton {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #4682B4;
+  color: #FFF;
+  font-size: 15px;
+  padding: 6px;
+  border-width: 0;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #4682B4;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #4682B4;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204A;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #4682B4;
+  color: #FFF;
+  font-size: 30px;
+  padding: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #4682B4;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: #00204A;
+  text-align: center;
+}
