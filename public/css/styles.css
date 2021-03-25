@@ -22,8 +22,9 @@ h1 {
   background-image: linear-gradient(#E4E9FD, #4682B4);
   overflow-x: hidden;
   padding: 16px 0;
-    border-right-style: double;
+  border-right-style: double;
   border-right-color: #00204A;
+  border-radius: 10%;
 }
 
 .sidenav a {
