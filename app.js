@@ -64,8 +64,8 @@ app.get("/", function(req, res) {
             console.log(err);
           } else {
             console.log("Successfully saved default items to DB.");
-            res.redirect("/");
           }
+            res.redirect("/");
         });
         //res.redirect("/"); was originally here; fixed BulkWriteError by moving it to above location
       } else {
@@ -94,8 +94,10 @@ app.get("/:customListName", function(req, res) {
           items: defaultItems
         });
 
-        list.save();
-        res.redirect("/" + customListName);
+        list.save(function(err, result) {
+          res.redirect("/" + customListName);
+        });
+
       } else {
         // Show existing list
         res.render("list", {listTitle: foundList.name, newListItems: foundList.items, existingLists: foundLists});
@@ -114,16 +116,19 @@ app.post("/", function(req, res) {
   });
 
   if (listName === "Today") {
-    item.save();
-    res.redirect("/");
+    item.save(function(err, result) {
+      res.redirect("/");
+    });
+
   } else {
     List.findOne({name: listName}, function(err, foundList) {
       foundList.items.push(item);
-      foundList.save();
-      res.redirect("/" + listName);
+      foundList.save(function(err, result) {
+        res.redirect("/" + listName);
+      });
+
     });
   }
-
 
 });
 
