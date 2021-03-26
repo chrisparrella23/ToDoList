@@ -42,7 +42,7 @@ const item4 = new Item({
   name: "Enter '/' followed by a new list name in the URL to make a new list."
 });
 
-const defaultItems = [item1, item2, item3];
+const defaultItems = [item1, item2, item3, item4];
 
 const listSchema = {
   name: String,
