@@ -13,7 +13,7 @@ h1 {
 /* Sidebar stuff */
 .sidenav {
   height: 100%;
-  width: 15%;
+  width: 28%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -42,7 +42,7 @@ h1 {
 .listButton {
   min-height: 50px;
   width: 50px;
-  border-radius: 50%;
+  border-radius: 25%;
   border-color: transparent;
   background-color: #4682B4;
   color: #FFF;

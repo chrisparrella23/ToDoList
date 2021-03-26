@@ -9,6 +9,11 @@
   <% existingLists.forEach(function(listItem) { %>
     <a href="/<%= listItem.name %>"> <%= listItem.name %> </a>
   <% }); %>
+
+  <form class="" action="/listRedirect" method="post">
+    <input type="text" name="newListName" placeholder="New List Name" autocomplete="off">
+    <button class="listButton" type="submit" name="newList" value="">New List</button>
+  </form>
 </div>
 
 <div class="box" id="">

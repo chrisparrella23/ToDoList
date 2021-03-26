@@ -132,6 +132,38 @@ app.post("/", function(req, res) {
 
 });
 
+app.post("/listRedirect", function(req, res) {
+  const listName = req.body.newListName;
+  const customListName = _.capitalize(listName);
+
+  const existingLists = [];
+  List.find({}, function(err, foundLists) {
+    existingLists.push(foundLists);
+
+  List.findOne({
+    name: customListName
+  }, function(err, foundList) {
+    if (!err) {
+      if (!foundList) {
+        // Create new list
+        const list = new List({
+          name: customListName,
+          items: defaultItems
+        });
+
+        list.save(function(err, result) {
+          res.redirect("/" + customListName);
+        });
+
+      } else {
+        // Show existing list
+        res.render("list", {listTitle: foundList.name, newListItems: foundList.items, existingLists: foundLists});
+      }
+    }
+  });
+});
+});
+
 app.post("/delete", function(req, res) {
   const checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
