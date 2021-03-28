@@ -13,18 +13,17 @@ h1 {
 /* Sidebar stuff */
 .sidenav {
   height: 100%;
-  width: 20%;
+  width: 15%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  /* background: #719FB0; */
-  background-image: linear-gradient(#E4E9FD, #4682B4);
+  background: #B0C4DE;
+  /* background-image: linear-gradient(-90deg, #E4E9FD, #4682B4); */
   overflow-x: hidden;
   padding: 16px 0;
   border-right-style: double;
   border-right-color: #00204A;
-  border-radius: 10%;
 }
 
 .sidenav a {
@@ -39,8 +38,14 @@ h1 {
   color: #FFF;
 }
 
-.listInput {
-  margin-bottom: 20px;
+.listInput[type="text"] {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.listInput::placeholder {
+  color: #FFF;
 }
 
 .listButton {
@@ -52,7 +57,7 @@ h1 {
   color: #FFF;
   font-size: 15px;
   padding: 6px;
-  margin: 0 80px;
+  margin: 0 40px;
   border-width: 0;
 }
 
