@@ -1,5 +1,4 @@
 html {
-  /* background-color: #E4E9FD; */
   background-image: repeating-radial-gradient(#F0F8FF 35%, #E4E9FD 65%);
   min-height: 1000px;
   font-family: 'Poppins';
@@ -19,7 +18,6 @@ h1 {
   top: 0;
   left: 0;
   background: #B0C4DE;
-  /* background-image: linear-gradient(-90deg, #E4E9FD, #4682B4); */
   overflow-x: hidden;
   padding: 16px 0;
   border-right-style: double;

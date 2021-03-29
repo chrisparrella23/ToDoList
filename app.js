@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-// const date = require(__dirname + "/date.js");
 
 const app = express();
 
@@ -48,7 +47,6 @@ const listSchema = {
 const List = mongoose.model("List", listSchema);
 
 app.get("/", function(req, res) {
-  //List sidenav experiment
   const existingLists = [];
   List.find({}, function(err, foundLists) {
     existingLists.push(foundLists);
@@ -63,7 +61,6 @@ app.get("/", function(req, res) {
           }
             res.redirect("/");
         });
-        //res.redirect("/"); was originally here; fixed BulkWriteError by moving it to above location
       } else {
         res.render("list", {listTitle: "Today", newListItems: foundItems, existingLists: foundLists});
       }
@@ -72,7 +69,6 @@ app.get("/", function(req, res) {
 });
 
 app.get("/:customListName", function(req, res) {
-  //sidenav experiment
   const existingLists = [];
   List.find({}, function(err, foundLists) {
     existingLists.push(foundLists);
@@ -122,10 +118,8 @@ app.post("/", function(req, res) {
       foundList.save(function(err, result) {
         res.redirect("/" + listName);
       });
-
     });
   }
-
 });
 
 app.post("/listRedirect", function(req, res) {
@@ -188,21 +182,6 @@ app.post("/delete", function(req, res) {
   }
 
 });
-
-// app.get("/work", function(req, res) {
-//   res.render("list", {listTitle: "Work List", newListItems: workItems});
-// });
-//
-// app.get("/about", function(req, res) {
-//   res.render("about");
-// });
-
-// Made obsolete by the if statement at line 25
-// app.post("/work", function(req, res) {
-//   const item = req.body.newItem;
-//   workItems.push(item);
-//   res.redirect("/work");
-// });
 
 app.listen(3000, function() {
   console.log("Server started on port 3000.");
