@@ -46,6 +46,7 @@ const listSchema = {
 
 const List = mongoose.model("List", listSchema);
 
+// Go to the home page
 app.get("/", function(req, res) {
   const existingLists = [];
   List.find({}, function(err, foundLists) {
@@ -68,6 +69,7 @@ app.get("/", function(req, res) {
   });
 });
 
+// Go to a custom page
 app.get("/:customListName", function(req, res) {
   const existingLists = [];
   List.find({}, function(err, foundLists) {
@@ -99,6 +101,7 @@ app.get("/:customListName", function(req, res) {
 });
 });
 
+// Add an item to a list
 app.post("/", function(req, res) {
   const itemName = req.body.newItem;
   const listName = req.body.list;
@@ -122,6 +125,7 @@ app.post("/", function(req, res) {
   }
 });
 
+// Make a new list from the sidenav input
 app.post("/listRedirect", function(req, res) {
   const listName = req.body.newListName;
   const customListName = _.capitalize(listName);
@@ -154,6 +158,7 @@ app.post("/listRedirect", function(req, res) {
 });
 });
 
+// Delete an item from a list
 app.post("/delete", function(req, res) {
   const checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
@@ -180,7 +185,6 @@ app.post("/delete", function(req, res) {
       }
     });
   }
-
 });
 
 app.listen(3000, function() {
