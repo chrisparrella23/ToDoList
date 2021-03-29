@@ -1,6 +1,6 @@
 html {
-  background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(-250deg, #4682B4 35%, #E4E9FD 65%);
+  /* background-color: #E4E9FD; */
+  background-image: repeating-radial-gradient(#F0F8FF 35%, #E4E9FD 65%);
   min-height: 1000px;
   font-family: 'Poppins';
 }
@@ -62,7 +62,7 @@ h1 {
 }
 
 .listButton:hover {
-  background-color: dodgerblue;
+  background-color: #1E90FF;
 }
 
 .box {
@@ -121,6 +121,10 @@ button {
   font-size: 30px;
   padding: 6px;
   border-width: 0;
+}
+
+button:hover {
+  background-color: #1E90FF;
 }
 
 input[type="text"] {
